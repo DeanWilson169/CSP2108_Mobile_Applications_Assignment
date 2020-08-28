@@ -15,8 +15,4 @@ function gridSize()
     display.newRect(0, 0, 0, 150, 150);
 end
 
-function testGridSize()
-
-end
-
 --os.exit( luaunit.LuaUnit.run())

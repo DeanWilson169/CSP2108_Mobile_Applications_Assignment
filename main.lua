@@ -4,8 +4,6 @@
 --
 -----------------------------------------------------------------------------------------
 
-local gridSize = require('DisplayData')
+local grid = require('grid')
 
-
---gridSize();
-display.newRect(0, 0, 0, 250, 150);
+grid()
