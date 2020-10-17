@@ -4,6 +4,6 @@
 --
 -----------------------------------------------------------------------------------------
 
-local grid = require('grid')
+local grid = require'grid'
 
-grid()
+print(grid);
