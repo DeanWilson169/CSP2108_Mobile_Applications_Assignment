@@ -5,5 +5,4 @@
 -----------------------------------------------------------------------------------------
 
 local grid = require'grid'
-
-print(grid);
+local dataPoints = require'dataPoints'

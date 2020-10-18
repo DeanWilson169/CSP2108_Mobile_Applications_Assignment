@@ -1,10 +1,19 @@
+require 'busted.runner'()
+local Grid = require"grid"
+local Add = require"add"
 
-lu = require('luaunit')
-local Grid = require("grid.lua")
+describe('add.lua', function() 
+    assert.are.equals(Add(40, 10), 400)
+end)
+
+
+function testAdd()
+    luaunit.assertEquals(add(40, 10), 400)
+end
 
 
 function testGrid()
 
 end
 
-os.exit( lu.LuaUnit.run() )
+os.exit( luaunit.LuaUnit.run() )
