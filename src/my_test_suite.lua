@@ -15,5 +15,3 @@ end
 function testGrid()
 
 end
-
-os.exit( luaunit.LuaUnit.run() )
