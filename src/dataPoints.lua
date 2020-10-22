@@ -1,4 +1,4 @@
-local readFile = require'readFile'
+local getDataFromFile = require'GetDataFromFile'
 
 local SCREEN_SIZE =  display.contentHeight / display.contentWidth
 local GRID_SIZE = SCREEN_SIZE + 1000

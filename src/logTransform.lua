@@ -1,4 +1,4 @@
-local readFile = require'readFile'
+local getDataFromFile = require'GetDataFromFile'
 local dataPoints = require'dataPoints'
 
 logData = {}
