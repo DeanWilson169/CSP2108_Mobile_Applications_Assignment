@@ -11,19 +11,28 @@ local GRID_START_POSITION_Y = GRID_CENTER_POSITION  + (CELL_SIZE / 2)
 
 Points = {}
 
-for i, d in ipairs(Data) do
-    -- print(i, d["neurons"], d["weight"], d["type"])
-    local newPoint = display.newCircle(GRID_START_POSITION_X + CELL_SIZE * d["neurons"], GRID_START_POSITION_Y + CELL_SIZE * d["weight"] , POINT_SIZE)
-    if d["type"] == "B" then
-        newPoint:setFillColor(0,0,1)
-    elseif d["type"] == "M" then
-        newPoint:setFillColor(1,0,0)
-    elseif d["type"] == "Z" then
-        newPoint:setFillColor(0,1,0)
+function DisplayPointsOnScreen()
+    local data = GetDataFromFile()
+    ClearDataPoints()
+    for i, d in ipairs(data) do
+        -- print(i, d["neurons"], d["weight"], d["type"])
+        local newPoint = display.newCircle(GRID_START_POSITION_X + CELL_SIZE * d["neurons"], GRID_START_POSITION_Y + CELL_SIZE * d["weight"] , POINT_SIZE)
+        if d["type"] == "B" then
+            newPoint:setFillColor(0,0,1)
+        elseif d["type"] == "M" then
+            newPoint:setFillColor(1,0,0)
+        elseif d["type"] == "Z" then
+            newPoint:setFillColor(0,1,0)
+        end
+        Points[#Points+1] = { point = newPoint } 
     end
-    Points[#Points+1] = { point = newPoint } 
 end
 
+function ClearDataPoints()
+    Points = {}
+end
+
+
 return {
-    dataPoints = dataPoints
+    DisplayPointsOnScreen = DisplayPointsOnScreen();
 }
